@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semesta Grup | Developer Properti Premium</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
+        .shadow-merah { box-shadow: 0 10px 40px -10px rgba(185, 28, 28, 0.15); }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-red-700 selection:text-white">
+
+    <!-- Navbar: Putih Bersih -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-red-50 transition-all shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+            
+            <!-- Logo Area -->
+            <div class="flex items-center space-x-4">
+                <div class="w-14 h-14 rounded-full overflow-hidden border border-red-100 shadow-sm flex-shrink-0 bg-white">
+                    <img src="Screenshot_20260912_223358_Instagram.jpg.jpeg" alt="Logo Semesta Grup" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-2xl font-extrabold tracking-tight text-gray-900 block leading-none">SEMESTA</span>
+                    <span class="text-[11px] font-bold tracking-[0.25em] text-red-700 uppercase">Grup</span>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-10 text-sm font-bold text-gray-600 uppercase tracking-wider">
+                <a href="#beranda" class="hover:text-red-700 transition">Beranda</a>
+                <a href="#tentang" class="hover:text-red-700 transition">Tentang</a>
+                <a href="#proyek" class="hover:text-red-700 transition">Proyek</a>
+                <a href="#legalitas" class="hover:text-red-700 transition">Legalitas</a>
+            </nav>
+
+            <div class="hidden md:flex items-center">
+                <a href="#kontak" class="bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-full font-bold text-sm transition shadow-merah">
+                    Hubungi Kami
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="menu-btn" class="md:hidden text-gray-900 focus:outline-none">
+                <i class="fa-solid fa-bars text-3xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-red-100 px-4 pt-2 pb-6 space-y-2 absolute w-full shadow-lg">
+            <a href="#beranda" class="block text-gray-800 font-bold py-3 border-b border-red-50 hover:text-red-700">Beranda</a>
+            <a href="#tentang" class="block text-gray-800 font-bold py-3 border-b border-red-50 hover:text-red-700">Tentang Kami</a>
+            <a href="#proyek" class="block text-gray-800 font-bold py-3 border-b border-red-50 hover:text-red-700">Proyek & Lokasi</a>
+            <a href="#legalitas" class="block text-gray-800 font-bold py-3 hover:text-red-700">Legalitas</a>
+            <a href="#kontak" class="block text-center bg-red-700 text-white py-4 mt-4 rounded-xl font-bold shadow-md">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <!-- Hero Section: Elegan Merah -->
+    <section id="beranda" class="pt-36 pb-24 md:pt-48 md:pb-32 bg-red-700 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-red-800/40 transform -skew-y-3 scale-110 origin-top-left z-0"></div>
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-5 py-2 rounded-full text-xs font-bold tracking-widest uppercase text-white mb-8 backdrop-blur-sm">
+                Rise with Integrity
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-8 text-white max-w-5xl mx-auto">
+                Wujudkan Hunian Impian Anda Bersama Semesta Grup
+            </h1>
+            <p class="text-lg md:text-xl text-red-100 mb-12 leading-relaxed font-light max-w-3xl mx-auto">
+                Developer properti terpercaya dan profesional. Hadir di Banyumas, DIY Yogyakarta, Banjarnegara, Purbalingga, dan Cilacap dengan desain hunian premium.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#proyek" class="bg-white text-red-700 hover:bg-gray-50 font-bold px-10 py-4 rounded-full text-center shadow-xl transition">Eksplorasi Proyek</a>
+                <a href="#kontak" class="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold px-10 py-4 rounded-full text-center transition">Mulai Konsultasi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistik Section -->
+    <section class="py-12 bg-white border-b border-red-50 shadow-sm relative z-20 -mt-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-3xl shadow-merah p-8 md:p-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-red-50">
+                <div>
+                    <div class="text-4xl font-extrabold text-red-700 mb-1">10+</div>
+                    <div class="text-sm text-gray-500 font-bold uppercase tracking-wider">Lokasi Perumahan</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-red-700 mb-1">100+</div>
+                    <div class="text-sm text-gray-500 font-bold uppercase tracking-wider">Proyek Terlaksana</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-red-700 mb-1">5</div>
+                    <div class="text-sm text-gray-500 font-bold uppercase tracking-wider">Kota Ekspansi</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-red-700 mb-1">100%</div>
+                    <div class="text-sm text-gray-500 font-bold uppercase tracking-wider">Amanah & Resmi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="tentang" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-red-700 font-bold text-sm uppercase tracking-widest block mb-4">Profil Perusahaan</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-8 max-w-3xl mx-auto">Integritas dalam Setiap Pembangunan</h2>
+            <p class="text-gray-600 mb-16 leading-relaxed text-lg max-w-4xl mx-auto">
+                Semesta Grup hadir untuk menyediakan layanan terlengkap di bidang properti, menjunjung tinggi nilai integritas, profesionalisme, dan konsistensi untuk kepuasan pelanggan dengan asas kemanfaatan bagi masyarakat.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-red-50 p-10 rounded-3xl border border-red-100 text-left hover:shadow-merah transition duration-300">
+                    <div class="w-14 h-14 bg-red-700 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md"><i class="fa-solid fa-gem"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Visi Kami</h3>
+                    <p class="text-gray-600 leading-relaxed">Menjadi salah satu perusahaan properti terbaik dan profesional di Jawa Tengah dengan mengedepankan prinsip amanah, dan asas kemanfaatan bagi masyarakat dan stakeholder.</p>
+                </div>
+                <div class="bg-red-50 p-10 rounded-3xl border border-red-100 text-left hover:shadow-merah transition duration-300">
+                    <div class="w-14 h-14 bg-red-700 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Tsaqofah: Rise with Integrity</h3>
+                    <p class="text-gray-600 leading-relaxed">Naik kelas, naik target, naik kualitas dengan komitmen penuh pada profesionalisme, amanah, dan konsistensi dalam operasional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyek Section -->
+    <section id="proyek" class="py-24 bg-red-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-200 font-bold text-sm uppercase tracking-widest block mb-3">Portofolio Kami</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Mahakarya Semesta Grup</h2>
+                <p class="text-red-100 text-lg font-light">Eksplorasi pilihan hunian strategis dengan desain premium.</p>
+            </div>
+
+            <!-- Proyek List -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 transition duration-300">
+                    <div class="p-8 border-b border-gray-100 relative">
+                        <span class="absolute top-6 right-6 bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Tersedia</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1 mt-2">Semesta Aesthetic</h3>
+                        <p class="text-red-700 font-medium text-sm">Wiradadi, Sokaraja</p>
+                    </div>
+                    <div class="p-8 flex-1 bg-gray-50">
+                        <ul class="space-y-4 text-gray-600 font-medium">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> 138 Unit Rumah</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Tipe 30</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Desain Fasad Premium</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 transition duration-300">
+                    <div class="p-8 border-b border-gray-100 relative">
+                        <span class="absolute top-6 right-6 bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Tersedia</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1 mt-2">Semesta Cluster Teluk</h3>
+                        <p class="text-red-700 font-medium text-sm">Banyumas</p>
+                    </div>
+                    <div class="p-8 flex-1 bg-gray-50">
+                        <ul class="space-y-4 text-gray-600 font-medium">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> 26 Unit Tipe 30</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Terbagi Blok A, B, C</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Lingkungan Nyaman</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 transition duration-300">
+                    <div class="p-8 border-b border-gray-100 relative">
+                        <span class="absolute top-6 right-6 bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Tersedia</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1 mt-2">Semesta Townhouse</h3>
+                        <p class="text-red-700 font-medium text-sm">Kalimanah, Purbalingga</p>
+                    </div>
+                    <div class="p-8 flex-1 bg-gray-50">
+                        <ul class="space-y-4 text-gray-600 font-medium">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> 14 Unit Eksklusif</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Tipe 40</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Tata Ruang Modern</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 transition duration-300">
+                    <div class="p-8 border-b border-gray-100 relative">
+                        <span class="absolute top-6 right-6 bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Tersedia</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1 mt-2">Harmoni Bajong</h3>
+                        <p class="text-red-700 font-medium text-sm">Purbalingga</p>
+                    </div>
+                    <div class="p-8 flex-1 bg-gray-50">
+                        <ul class="space-y-4 text-gray-600 font-medium">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Tipe 45 & Tipe 55</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Total 26 Unit</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Fasilitas Aula Pertemuan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 transition duration-300">
+                    <div class="p-8 border-b border-gray-100 relative">
+                        <span class="absolute top-6 right-6 bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Tersedia</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1 mt-2">Semesta Alaya</h3>
+                        <p class="text-red-700 font-medium text-sm">Purwareja Klampok</p>
+                    </div>
+                    <div class="p-8 flex-1 bg-gray-50">
+                        <ul class="space-y-4 text-gray-600 font-medium">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> 72 Unit Tipe 36</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Lokasi Banjarnegara</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-red-600 mt-1 mr-3"></i> Fasilitas Mushola & TPQ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Info Box -->
+                <div class="bg-red-800 rounded-3xl p-8 text-white border border-red-600 flex flex-col justify-center">
+                    <h3 class="text-xl font-bold mb-4">Segera Hadir & Terjual Habis</h3>
+                    <ul class="space-y-3 text-sm text-red-100">
+                        <li class="border-b border-red-700 pb-2"><b>Semesta de Villa Wonosari (DIY):</b> 57 Unit (Tipe 40/45)</li>
+                        <li class="border-b border-red-700 pb-2"><b>Semesta Gardenville (Sumbang):</b> 50 Unit</li>
+                        <li class="border-b border-red-700 pb-2"><b>Semesta de Villa Cilacap:</b> Villa Premium</li>
+                        <li class="pt-2"><b class="text-white">Sold Out 100%:</b> Graha Emerald Jatilawang & Aesthetic Banteran.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legalitas & Keamanan -->
+    <section id="legalitas" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-24 h-24 bg-red-50 text-red-700 rounded-full flex items-center justify-center text-4xl mx-auto mb-8 shadow-sm">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">Telah Berbadan Hukum Resmi</h2>
+            <p class="text-gray-600 text-lg md:text-xl leading-relaxed">
+                Keamanan dan kenyamanan Anda adalah prioritas kami. Semesta Grup beroperasi secara profesional dan sepenuhnya berada di bawah payung hukum badan usaha yang terdaftar resmi di **Kementerian Hukum dan HAM Republik Indonesia (Kemenkumham RI)**.
+            </p>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-24 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-[2.5rem] shadow-merah overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    
+                    <!-- Info Kontak -->
+                    <div class="bg-red-700 p-12 md:p-16 text-white flex flex-col justify-center relative">
+                        <div class="absolute top-0 right-0 p-10 opacity-10"><i class="fa-solid fa-comments text-9xl"></i></div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 relative z-10">Pusat Layanan Konsumen</h2>
+                        <p class="text-red-100 mb-12 text-lg relative z-10">
+                            Silakan hubungi tim marketing kami untuk informasi harga terbaru, ketersediaan unit, maupun jadwal kunjungan lokasi.
+                        </p>
+                        
+                        <div class="space-y-8 relative z-10">
+                            <div class="flex items-start space-x-6">
+                                <div class="w-14 h-14 rounded-full bg-white text-red-700 flex items-center justify-center text-2xl shrink-0"><i class="fa-solid fa-map-location-dot"></i></div>
+                                <div>
+                                    <div class="text-sm text-red-200 mb-1 font-bold tracking-widest uppercase">Marketing Point</div>
+                                    <div class="font-medium leading-relaxed">Jalan Prof. HR. Soeharso, Timur GOR Satria Purwokerto, Banyumas, Jawa Tengah 53111</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-6">
+                                <div class="w-14 h-14 rounded-full bg-white text-red-700 flex items-center justify-center text-2xl shrink-0"><i class="fa-brands fa-instagram"></i></div>
+                                <div>
+                                    <div class="text-sm text-red-200 mb-1 font-bold tracking-widest uppercase">Instagram</div>
+                                    <div class="font-medium text-lg">@semestagrup</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-6">
+                                <div class="w-14 h-14 rounded-full bg-white text-red-700 flex items-center justify-center text-2xl shrink-0"><i class="fa-solid fa-globe"></i></div>
+                                <div>
+                                    <div class="text-sm text-red-200 mb-1 font-bold tracking-widest uppercase">Website</div>
+                                    <div class="font-medium text-lg">www.semestagrup.id</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulir Email -->
+                    <div class="p-12 md:p-16 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-8 text-gray-900">Kirim Pesan via Email</h3>
+                        <!-- Form directly opening default mail client -->
+                        <form action="mailto:arzachelsakhaarkan@gmail.com?subject=Konsultasi%20Perumahan%20Semesta%20Grup" method="POST" enctype="text/plain" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Nama Lengkap</label>
+                                <input type="text" name="Nama" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 transition" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">No. WhatsApp</label>
+                                <input type="tel" name="WhatsApp" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 transition" placeholder="Contoh: 0812xxxxxx">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Pesan / Lokasi Diminati</label>
+                                <textarea name="Pesan" rows="4" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 transition" placeholder="Tuliskan pertanyaan atau lokasi perumahan..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-red-700 hover:bg-red-800 text-white font-bold py-5 rounded-xl transition shadow-merah text-lg flex justify-center items-center">
+                                Kirim Pesan Konsultasi <i class="fa-solid fa-paper-plane ml-3"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-10 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="w-14 h-14 mx-auto mb-6 rounded-full overflow-hidden border border-gray-200 opacity-80">
+                <img src="Screenshot_20260912_223358_Instagram.jpg.jpeg" alt="Semesta Grup Footer" class="w-full h-full object-cover">
+            </div>
+            <p class="font-bold text-sm text-gray-400 uppercase tracking-widest">&copy; 2026 Semesta Grup. Rise with Integrity.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(anchor => {
+            anchor.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
