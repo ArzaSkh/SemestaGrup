@@ -30,6 +30,11 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
         .shadow-merah { box-shadow: 0 10px 40px -10px rgba(185, 28, 28, 0.15); }
+        .google-icon { background: conic-gradient(from 180deg at 50% 50%, #4285F4 0deg, #34A853 90deg, #FBBC05 180deg, #EA4335 270deg, #4285F4 360deg); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Class khusus untuk menyembunyikan scrollbar di slider mobile tapi tetap bisa di-scroll */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="text-gray-800 antialiased selection:bg-red-700 selection:text-white overflow-x-hidden">
@@ -50,10 +55,11 @@
             </div>
 
             <!-- Desktop Menu -->
-            <nav class="hidden md:flex items-center space-x-10 text-sm font-bold text-gray-700 uppercase tracking-wider">
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-bold text-gray-700 uppercase tracking-wider">
                 <a href="#beranda" class="hover:text-red-700 hover:-translate-y-1 transition-transform duration-300">Beranda</a>
-                <a href="#tentang" class="hover:text-red-700 hover:-translate-y-1 transition-transform duration-300">Tentang Kami</a>
-                <a href="#proyek" class="hover:text-red-700 hover:-translate-y-1 transition-transform duration-300">Proyek & Unit Bisnis</a>
+                <a href="#tentang" class="hover:text-red-700 hover:-translate-y-1 transition-transform duration-300">Tentang</a>
+                <a href="#proyek" class="hover:text-red-700 hover:-translate-y-1 transition-transform duration-300">Proyek</a>
+                <a href="#testimoni" class="hover:text-red-700 hover:-translate-y-1 transition-transform duration-300">Testimoni</a>
                 <a href="#legalitas" class="hover:text-red-700 hover:-translate-y-1 transition-transform duration-300">Legalitas</a>
             </nav>
 
@@ -64,16 +70,17 @@
             </div>
 
             <!-- Mobile menu button -->
-            <button id="menu-btn" class="md:hidden text-gray-900 focus:outline-none hover:scale-110 transition-transform">
+            <button id="menu-btn" class="lg:hidden text-gray-900 focus:outline-none hover:scale-110 transition-transform">
                 <i class="fa-solid fa-bars text-3xl"></i>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-red-100 px-4 pt-2 pb-6 space-y-2 absolute w-full shadow-lg">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-red-100 px-4 pt-2 pb-6 space-y-2 absolute w-full shadow-lg">
             <a href="#beranda" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700">Beranda</a>
             <a href="#tentang" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700">Tentang Kami</a>
             <a href="#proyek" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700">Proyek & Unit Bisnis</a>
+            <a href="#testimoni" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700">Testimoni Ulasan</a>
             <a href="#legalitas" class="block text-gray-800 font-bold py-3 hover:text-red-700">Legalitas</a>
             <a href="#kontak" class="block text-center bg-red-700 text-white py-4 mt-4 rounded-xl font-bold shadow-md hover:bg-red-800 transition-colors">Hubungi Kami</a>
         </div>
@@ -162,7 +169,7 @@
             <!-- Proyek List -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Card 1: Stok Menipis -->
+                <!-- Card 1 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 relative border-2 border-orange-400" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-8 border-b border-gray-100 flex flex-col items-start">
                         <span class="bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider animate-pulse mb-3">Stok Menipis</span>
@@ -231,7 +238,8 @@
                     <div class="p-8 border-b border-gray-100 flex flex-col items-start">
                         <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-3">Tersedia</span>
                         <h3 class="text-2xl font-bold text-gray-900 mb-1">Semesta Alaya</h3>
-                        <p class="text-red-700 font-medium text-sm">Purwareja Klampok</p>
+                        <!-- Keterangan Banjarnegara ditambahkan di sini -->
+                        <p class="text-red-700 font-medium text-sm">Purwareja Klampok, Banjarnegara</p>
                     </div>
                     <div class="p-8 flex-1 bg-gray-50">
                         <ul class="space-y-4 text-gray-600 font-medium">
@@ -252,6 +260,145 @@
                         <li class="pt-4 border-t border-red-700"><b class="text-white block mb-1">Sold Out 100%:</b> Graha Emerald Jatilawang & Semesta Aesthetic Banteran.</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Google Maps Section (Responsive Horizontal Scroll for Mobile) -->
+    <section id="testimoni" class="py-24 bg-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm mx-auto mb-4">
+                    <i class="fa-brands fa-google google-icon"></i>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">Ulasan Bintang 5</h2>
+                <p class="text-gray-600 text-lg">Apa kata para konsumen tentang proyek Semesta Grup berdasarkan ulasan asli di Google Maps.</p>
+            </div>
+
+            <!-- Wrapper Flex untuk Mobile Swipe & Grid untuk Desktop -->
+            <div class="flex flex-nowrap md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-4 hide-scrollbar" data-aos="fade-up" data-aos-delay="200">
+                
+                <!-- Review 1 -->
+                <div class="w-[85vw] md:w-auto shrink-0 snap-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-merah hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center font-bold text-xl">N</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">N*****a B*****s</h4>
+                                <p class="text-xs text-gray-500 font-medium">Lokal Guide</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-1">
+                        "KPR bersubsidi, rumah pertama yang sangat cocok, developernya baik, solutif, kalo ada komplenan selalu dicarikan solusi. Kalo punya kesabaran, lain2nya aman kok."
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="w-[85vw] md:w-auto shrink-0 snap-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-merah hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold text-xl">C</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">C****b G***i</h4>
+                                <p class="text-xs text-gray-500 font-medium">Lokal Guide</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-1">
+                        "Perumahan subsidi, kualitas bangunan bagus. Lingkungan asri dekat kota."
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="w-[85vw] md:w-auto shrink-0 snap-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-merah hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-pink-100 text-pink-700 rounded-full flex items-center justify-center font-bold text-xl">M</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">M***a N*****m</h4>
+                                <p class="text-xs text-gray-500 font-medium">2 ulasan</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-1">
+                        "Lokasinya strategis, harga murah tp kwalitas bagus modelnya jg sy suka 😍"
+                    </p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="w-[85vw] md:w-auto shrink-0 snap-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-merah hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold text-xl">M</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">M**h M******h</h4>
+                                <p class="text-xs text-gray-500 font-medium">Lokal Guide</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-1">
+                        "Rumah subsidi dengan akses jalan terbaik yang pernah saya temui."
+                    </p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="w-[85vw] md:w-auto shrink-0 snap-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-merah hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-full flex items-center justify-center font-bold text-xl">L</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">L***y C***o</h4>
+                                <p class="text-xs text-gray-500 font-medium">4 ulasan</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-1">
+                        "Lokasi strategis pinggir jalan raya provinsi terobosan arah Banjarnegara, dari pom bensin Kalimanah ga jauh."
+                    </p>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="w-[85vw] md:w-auto shrink-0 snap-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-merah hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-red-100 text-red-700 rounded-full flex items-center justify-center font-bold text-xl">A</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">A**i K****a</h4>
+                                <p class="text-xs text-gray-500 font-medium">Lokal Guide</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-1">
+                        "Perumahan subsidi rasa komersil."
+                    </p>
+                </div>
+
+            </div>
+            
+            <!-- Indikator Geser untuk Mobile -->
+            <div class="flex justify-center mt-2 md:hidden">
+                <span class="text-xs text-gray-400 font-medium tracking-widest uppercase flex items-center">
+                    <i class="fa-solid fa-arrows-left-right mr-2"></i> Geser untuk melihat
+                </span>
             </div>
         </div>
     </section>
@@ -310,7 +457,7 @@
                         </div>
                     </div>
 
-                    <!-- Kontak Instagram (Pengganti Form Email) -->
+                    <!-- Kontak Instagram -->
                     <div class="p-12 md:p-16 flex flex-col justify-center items-center text-center">
                         <div class="w-20 h-20 bg-red-50 text-red-700 rounded-full flex items-center justify-center text-4xl mb-6 shadow-sm hover:scale-110 transition-transform duration-300">
                             <i class="fa-brands fa-instagram"></i>
