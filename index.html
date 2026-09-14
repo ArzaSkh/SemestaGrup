@@ -35,14 +35,6 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
         .shadow-merah { box-shadow: 0 10px 40px -10px rgba(185, 28, 28, 0.15); }
         
-        /* Gradien Baru Logo Google (Lebih Mulus) */
-        .google-icon { 
-            background: linear-gradient(135deg, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%);
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            display: inline-block;
-        }
-        
         /* Class khusus untuk menyembunyikan scrollbar di slider mobile */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -86,7 +78,7 @@
             </button>
         </div>
 
-        <!-- Mobile Menu (Sudah diberi Animasi Transisi) -->
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="lg:hidden fixed inset-x-0 top-24 bg-white border-b border-red-100 px-4 pt-4 pb-6 space-y-2 shadow-2xl transform transition-all duration-300 ease-in-out opacity-0 -translate-y-10 pointer-events-none z-40">
             <a href="#beranda" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700 transition-colors">Beranda</a>
             <a href="#tentang" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700 transition-colors">Tentang Kami</a>
@@ -103,15 +95,15 @@
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <!-- Text container animated -->
-            <div class="max-w-2xl border-l-4 border-red-700 pl-6 md:pl-8 py-2" data-aos="fade-up" data-aos-duration="1000">
+            <!-- Text container dengan animasi kreatif (zoom-out-up) -->
+            <div class="max-w-2xl border-l-4 border-red-700 pl-6 md:pl-8 py-2" data-aos="zoom-out-up" data-aos-duration="1200" data-aos-easing="ease-out-back">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
                     Membangun Masa Depan dengan Integritas
                 </h1>
                 <p class="text-lg md:text-xl text-gray-200 mb-10 font-light leading-relaxed">
                     Semesta Grup hadir untuk membangun lebih dari sekadar rumah. Kami membangun ruang bagi keluarga tumbuh, bermimpi, memberi ketenangan hari ini dan harapan terbaik untuk masa depan.
                 </p>
-                <a href="#proyek" class="inline-block border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold px-10 py-3.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95">
+                <a href="#proyek" class="inline-block border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold px-10 py-3.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg">
                     Lihat Proyek
                 </a>
             </div>
@@ -120,21 +112,22 @@
 
     <!-- Statistik Section -->
     <section class="py-12 bg-white border-b border-gray-100 shadow-sm relative z-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-3xl shadow-merah p-8 md:p-12 -mt-20 relative z-30" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-3xl shadow-merah p-8 md:p-12 -mt-20 relative z-30" data-aos="fade-up" data-aos-duration="800">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">
-                <div data-aos="zoom-in" data-aos-delay="300">
+                <!-- Animasi Flip memutar berurutan -->
+                <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
                     <div class="text-4xl font-extrabold text-red-700 mb-1">10+</div>
                     <div class="text-sm text-gray-500 font-bold uppercase tracking-wider">Lokasi Perumahan</div>
                 </div>
-                <div data-aos="zoom-in" data-aos-delay="400">
+                <div data-aos="flip-left" data-aos-delay="400" data-aos-duration="1000">
                     <div class="text-4xl font-extrabold text-red-700 mb-1">100+</div>
                     <div class="text-sm text-gray-500 font-bold uppercase tracking-wider">Proyek Terlaksana</div>
                 </div>
-                <div data-aos="zoom-in" data-aos-delay="500">
+                <div data-aos="flip-left" data-aos-delay="600" data-aos-duration="1000">
                     <div class="text-4xl font-extrabold text-red-700 mb-1">5</div>
                     <div class="text-sm text-gray-500 font-bold uppercase tracking-wider">Kota Ekspansi</div>
                 </div>
-                <div data-aos="zoom-in" data-aos-delay="600">
+                <div data-aos="flip-left" data-aos-delay="800" data-aos-duration="1000">
                     <div class="text-4xl font-extrabold text-red-700 mb-1">100%</div>
                     <div class="text-sm text-gray-500 font-bold uppercase tracking-wider">Amanah & Resmi</div>
                 </div>
@@ -145,7 +138,7 @@
     <!-- Tentang Kami -->
     <section id="tentang" class="py-24 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" data-aos-duration="800">
                 <span class="text-red-700 font-bold text-sm uppercase tracking-widest block mb-4">Profil Perusahaan</span>
                 <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-8 max-w-3xl mx-auto">Integritas dalam Setiap Pembangunan</h2>
                 <p class="text-gray-600 mb-16 leading-relaxed text-lg max-w-4xl mx-auto">
@@ -154,12 +147,13 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 text-left hover:shadow-merah hover:-translate-y-2 transition-all duration-300" data-aos="fade-right" data-aos-duration="800">
+                <!-- Animasi geser dengan efek pantulan pegas (ease-out-back) -->
+                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 text-left hover:shadow-merah hover:-translate-y-3 transition-all duration-500" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-out-back">
                     <div class="w-14 h-14 bg-red-700 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md"><i class="fa-solid fa-gem"></i></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Visi Kami</h3>
                     <p class="text-gray-600 leading-relaxed">Menjadi salah satu perusahaan properti terbaik dan profesional di Jawa Tengah dengan mengedepankan prinsip amanah, dan asas kemanfaatan bagi masyarakat dan stakeholder.</p>
                 </div>
-                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 text-left hover:shadow-merah hover:-translate-y-2 transition-all duration-300" data-aos="fade-left" data-aos-duration="800">
+                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 text-left hover:shadow-merah hover:-translate-y-3 transition-all duration-500" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-out-back">
                     <div class="w-14 h-14 bg-red-700 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md"><i class="fa-solid fa-arrow-trend-up"></i></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Tsaqofah: Rise with Integrity</h3>
                     <p class="text-gray-600 leading-relaxed">Naik kelas, naik target, naik kualitas dengan komitmen penuh pada profesionalisme, amanah, dan konsistensi dalam operasional.</p>
@@ -181,7 +175,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Card 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 relative border-2 border-orange-400" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500 relative border-2 border-orange-400" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-8 border-b border-gray-100 flex flex-col items-start">
                         <span class="bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider animate-pulse mb-3">Stok Menipis</span>
                         <h3 class="text-2xl font-bold text-gray-900 mb-1">Semesta Aesthetic</h3>
@@ -197,7 +191,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-8 border-b border-gray-100 flex flex-col items-start">
                         <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-3">Tersedia</span>
                         <h3 class="text-2xl font-bold text-gray-900 mb-1">Semesta Cluster Teluk</h3>
@@ -213,7 +207,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
                     <div class="p-8 border-b border-gray-100 flex flex-col items-start">
                         <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-3">Tersedia</span>
                         <h3 class="text-2xl font-bold text-gray-900 mb-1">Semesta Townhouse</h3>
@@ -229,7 +223,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="400">
                     <div class="p-8 border-b border-gray-100 flex flex-col items-start">
                         <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-3">Tersedia</span>
                         <h3 class="text-2xl font-bold text-gray-900 mb-1">Semesta Harmoni Bajong</h3>
@@ -245,7 +239,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="500">
                     <div class="p-8 border-b border-gray-100 flex flex-col items-start">
                         <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-3">Tersedia</span>
                         <h3 class="text-2xl font-bold text-gray-900 mb-1">Semesta Alaya</h3>
@@ -261,7 +255,7 @@
                 </div>
 
                 <!-- Coming Soon Info Box -->
-                <div class="bg-red-900 rounded-3xl p-8 text-white border border-red-800 flex flex-col justify-center transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 shadow-xl" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-red-900 rounded-3xl p-8 text-white border border-red-800 flex flex-col justify-center transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500 shadow-xl" data-aos="fade-up" data-aos-delay="600">
                     <h3 class="text-xl font-bold mb-4 border-b border-red-700 pb-2">Segera Hadir & Terjual Habis</h3>
                     <ul class="space-y-3 text-sm text-red-100">
                         <li class="pb-1"><b>Semesta de Villa Wonosari (DIY):</b> 57 Unit (Tipe 40/45)</li>
@@ -278,9 +272,12 @@
     <section id="testimoni" class="py-24 bg-gray-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm mx-auto mb-4">
-                    <i class="fa-brands fa-google google-icon"></i>
+                
+                <!-- Gambar OIP.webp Google Logo -->
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mx-auto mb-4 border border-gray-100 overflow-hidden">
+                    <img src="OIP.webp" alt="Google Logo" class="w-10 h-10 object-contain">
                 </div>
+                
                 <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">Ulasan Bintang 5</h2>
                 <p class="text-gray-600 text-lg">Apa kata para konsumen tentang proyek Semesta Grup berdasarkan ulasan asli di Google Maps.</p>
             </div>
@@ -415,8 +412,8 @@
 
     <!-- Legalitas & Keamanan -->
     <section id="legalitas" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in" data-aos-duration="800">
-            <div class="w-24 h-24 bg-red-50 text-red-700 rounded-full flex items-center justify-center text-4xl mx-auto mb-8 shadow-sm hover:scale-110 transition-transform duration-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-out-back">
+            <div class="w-24 h-24 bg-red-50 text-red-700 rounded-full flex items-center justify-center text-4xl mx-auto mb-8 shadow-sm hover:scale-110 hover:-rotate-12 transition-transform duration-500">
                 <i class="fa-solid fa-scale-balanced"></i>
             </div>
             <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">Telah Berbadan Hukum Resmi</h2>
@@ -467,8 +464,8 @@
                         </div>
                     </div>
 
-                    <!-- Kontak Instagram -->
-                    <div class="p-12 md:p-16 flex flex-col justify-center items-center text-center">
+                    <!-- Kontak Instagram (Tombol Mobile Diperbaiki) -->
+                    <div class="p-10 sm:p-12 md:p-16 flex flex-col justify-center items-center text-center">
                         <div class="w-20 h-20 bg-red-50 text-red-700 rounded-full flex items-center justify-center text-4xl mb-6 shadow-sm hover:scale-110 transition-transform duration-300">
                             <i class="fa-brands fa-instagram"></i>
                         </div>
@@ -476,8 +473,9 @@
                         <p class="text-gray-600 mb-10 leading-relaxed max-w-sm mx-auto">
                             Punya pertanyaan seputar ketersediaan unit, harga, atau ingin mengatur jadwal survei lokasi? Langsung saja kirim pesan (DM) ke Instagram resmi kami.
                         </p>
-                        <a href="https://www.instagram.com/semestagrup/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-700 hover:bg-red-800 text-white font-bold py-5 rounded-xl shadow-merah text-lg flex justify-center items-center hover:scale-105 active:scale-95 transition-all duration-300">
-                            DM Instagram @semestagrup <i class="fa-solid fa-arrow-right ml-3"></i>
+                        <!-- Tombol Responsive: padding dan ukuran text disesuaikan -->
+                        <a href="https://www.instagram.com/semestagrup/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-700 hover:bg-red-800 text-white font-bold py-4 sm:py-5 px-4 rounded-xl shadow-merah text-sm sm:text-base lg:text-lg flex justify-center items-center hover:scale-105 active:scale-95 transition-all duration-300">
+                            DM Instagram @semestagrup <i class="fa-solid fa-arrow-right ml-2 md:ml-3"></i>
                         </a>
                     </div>
                 </div>
@@ -500,7 +498,7 @@
     <script>
         AOS.init({
             once: true, // Animasi hanya berjalan satu kali saat pertama kali scroll
-            offset: 50, // Muncul sedikit lebih cepat sebelum elemen terlihat penuh
+            offset: 30, // Muncul sedikit lebih cepat sebelum elemen terlihat penuh
             duration: 800, // Durasi animasi standar
             easing: 'ease-out-cubic', // Gerakan yang halus
         });
