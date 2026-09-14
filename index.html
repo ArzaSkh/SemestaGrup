@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semesta Group | Property Development</title>
     
+    <!-- FAVICON (Ikon Tab Browser) -->
+    <link rel="icon" type="image/jpeg" href="Screenshot_20260912_223358_Instagram.jpg.jpeg">
+    <link rel="apple-touch-icon" href="Screenshot_20260912_223358_Instagram.jpg.jpeg">
+
     <!-- Meta Tags Dasar untuk SEO Google -->
     <meta name="description" content="Semesta Group menaungi dua entitas perusahaan pengembang properti yang berfokus pada pembangunan hunian dan kawasan berkualitas.">
     
@@ -30,9 +34,16 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
         .shadow-merah { box-shadow: 0 10px 40px -10px rgba(185, 28, 28, 0.15); }
-        .google-icon { background: conic-gradient(from 180deg at 50% 50%, #4285F4 0deg, #34A853 90deg, #FBBC05 180deg, #EA4335 270deg, #4285F4 360deg); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        /* Class khusus untuk menyembunyikan scrollbar di slider mobile tapi tetap bisa di-scroll */
+        /* Gradien Baru Logo Google (Lebih Mulus) */
+        .google-icon { 
+            background: linear-gradient(135deg, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%);
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            display: inline-block;
+        }
+        
+        /* Class khusus untuk menyembunyikan scrollbar di slider mobile */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
@@ -41,10 +52,10 @@
 
     <!-- Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between relative z-50 bg-transparent">
             
             <!-- Logo Area -->
-            <div class="flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center space-x-4 hover:scale-105 transition-transform duration-300 relative z-50">
                 <div class="w-14 h-14 rounded-full overflow-hidden border border-gray-200 shadow-sm flex-shrink-0 bg-white">
                     <img src="Screenshot_20260912_223358_Instagram.jpg.jpeg" alt="Logo Semesta Grup" class="w-full h-full object-cover">
                 </div>
@@ -70,19 +81,19 @@
             </div>
 
             <!-- Mobile menu button -->
-            <button id="menu-btn" class="lg:hidden text-gray-900 focus:outline-none hover:scale-110 transition-transform">
-                <i class="fa-solid fa-bars text-3xl"></i>
+            <button id="menu-btn" class="lg:hidden text-gray-900 focus:outline-none hover:scale-110 transition-transform relative z-50">
+                <i id="menu-icon" class="fa-solid fa-bars text-3xl transition-transform duration-300"></i>
             </button>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-red-100 px-4 pt-2 pb-6 space-y-2 absolute w-full shadow-lg">
-            <a href="#beranda" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700">Beranda</a>
-            <a href="#tentang" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700">Tentang Kami</a>
-            <a href="#proyek" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700">Proyek & Unit Bisnis</a>
-            <a href="#testimoni" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700">Testimoni Ulasan</a>
-            <a href="#legalitas" class="block text-gray-800 font-bold py-3 hover:text-red-700">Legalitas</a>
-            <a href="#kontak" class="block text-center bg-red-700 text-white py-4 mt-4 rounded-xl font-bold shadow-md hover:bg-red-800 transition-colors">Hubungi Kami</a>
+        <!-- Mobile Menu (Sudah diberi Animasi Transisi) -->
+        <div id="mobile-menu" class="lg:hidden fixed inset-x-0 top-24 bg-white border-b border-red-100 px-4 pt-4 pb-6 space-y-2 shadow-2xl transform transition-all duration-300 ease-in-out opacity-0 -translate-y-10 pointer-events-none z-40">
+            <a href="#beranda" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700 transition-colors">Beranda</a>
+            <a href="#tentang" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700 transition-colors">Tentang Kami</a>
+            <a href="#proyek" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700 transition-colors">Proyek & Unit Bisnis</a>
+            <a href="#testimoni" class="block text-gray-800 font-bold py-3 border-b border-gray-50 hover:text-red-700 transition-colors">Testimoni Ulasan</a>
+            <a href="#legalitas" class="block text-gray-800 font-bold py-3 hover:text-red-700 transition-colors">Legalitas</a>
+            <a href="#kontak" class="block text-center bg-red-700 text-white py-4 mt-6 rounded-xl font-bold shadow-md hover:bg-red-800 transition-colors">Hubungi Kami</a>
         </div>
     </header>
 
@@ -238,7 +249,6 @@
                     <div class="p-8 border-b border-gray-100 flex flex-col items-start">
                         <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-3">Tersedia</span>
                         <h3 class="text-2xl font-bold text-gray-900 mb-1">Semesta Alaya</h3>
-                        <!-- Keterangan Banjarnegara ditambahkan di sini -->
                         <p class="text-red-700 font-medium text-sm">Purwareja Klampok, Banjarnegara</p>
                     </div>
                     <div class="p-8 flex-1 bg-gray-50">
@@ -264,7 +274,7 @@
         </div>
     </section>
 
-    <!-- Testimoni Google Maps Section (Responsive Horizontal Scroll for Mobile) -->
+    <!-- Testimoni Google Maps Section -->
     <section id="testimoni" class="py-24 bg-gray-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
@@ -496,18 +506,35 @@
         });
     </script>
 
-    <!-- Mobile Menu Script -->
+    <!-- Mobile Menu Transisi Script -->
     <script>
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
         
+        // Fungsi klik tombol menu
         btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            // Toggle efek transisi slide & opacity
+            menu.classList.toggle('opacity-0');
+            menu.classList.toggle('-translate-y-10');
+            menu.classList.toggle('pointer-events-none');
+            
+            // Mengubah Ikon Garis Tiga (Bars) menjadi Silang (X)
+            if (menu.classList.contains('opacity-0')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
         });
 
+        // Menutup menu otomatis saat tautan diklik
         document.querySelectorAll('#mobile-menu a').forEach(anchor => {
             anchor.addEventListener('click', () => {
-                menu.classList.add('hidden');
+                menu.classList.add('opacity-0', '-translate-y-10', 'pointer-events-none');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
             });
         });
     </script>
